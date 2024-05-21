@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\AIE_Year_1\\Maths_For_Games_Assignments\\Maths_For_Games_Assignments\\Custom Data Types\\Custom_Data_Types\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{449B665B-64C2-4FBA-9366-4C05C855ED4A}|Custom_Data_Types\\Custom_Data_Types.vcxproj|C:\\Users\\User\\Documents\\AIE_Year_1\\Maths_For_Games_Assignments\\Maths_For_Games_Assignments\\Custom Data Types\\Custom_Data_Types\\Custom_Data_Types\\Custom_Data_Types.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{449B665B-64C2-4FBA-9366-4C05C855ED4A}|Custom_Data_Types\\Custom_Data_Types.vcxproj|solutionrelative:Custom_Data_Types\\Custom_Data_Types.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Documents\\AIE_Year_1\\Maths_For_Games_Assignments\\Maths_For_Games_Assignments\\Custom Data Types\\Custom_Data_Types\\Custom_Data_Types\\Custom_Data_Types.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Custom_Data_Types\\Custom_Data_Types.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,12 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,10 +24,14 @@
               "RelativeDocumentMoniker": "Custom_Data_Types\\Custom_Data_Types.cpp",
               "ToolTip": "C:\\Users\\User\\Documents\\AIE_Year_1\\Maths_For_Games_Assignments\\Maths_For_Games_Assignments\\Custom Data Types\\Custom_Data_Types\\Custom_Data_Types\\Custom_Data_Types.cpp",
               "RelativeToolTip": "Custom_Data_Types\\Custom_Data_Types.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-29T03:26:55.613Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
