@@ -1,5 +1,6 @@
 #pragma once
 #include "Vector4.h"
+#include "Vector3.h"
 #include <string>
 #include <cmath>
 
@@ -41,31 +42,31 @@ namespace MathClasses {
             m13(arr[12]), m14(arr[13]), m15(arr[14]), m16(arr[15])
         {}
 
-        // Operator overload for matrix-matrix multiplication
+        //operator overloader for multiplication
         Matrix4 operator*(const Matrix4& other) const {
             return Matrix4(
                 // First column
                 m1 * other.m1 + m5 * other.m2 + m9 * other.m3 + m13 * other.m4,
-                m1 * other.m5 + m5 * other.m6 + m9 * other.m7 + m13 * other.m8,
-                m1 * other.m9 + m5 * other.m10 + m9 * other.m11 + m13 * other.m12,
-                m1 * other.m13 + m5 * other.m14 + m9 * other.m15 + m13 * other.m16,
+                m2 * other.m1 + m6 * other.m2 + m10 * other.m3 + m14 * other.m4,
+                m3 * other.m1 + m7 * other.m2 + m11 * other.m3 + m15 * other.m4,
+                m4 * other.m1 + m8 * other.m2 + m12 * other.m3 + m16 * other.m4,
 
                 // Second column
-                m2 * other.m1 + m6 * other.m2 + m10 * other.m3 + m14 * other.m4,
+                m1 * other.m5 + m5 * other.m6 + m9 * other.m7 + m13 * other.m8,
                 m2 * other.m5 + m6 * other.m6 + m10 * other.m7 + m14 * other.m8,
-                m2 * other.m9 + m6 * other.m10 + m10 * other.m11 + m14 * other.m12,
-                m2 * other.m13 + m6 * other.m14 + m10 * other.m15 + m14 * other.m16,
+                m3 * other.m5 + m7 * other.m6 + m11 * other.m7 + m15 * other.m8,
+                m4 * other.m5 + m8 * other.m6 + m12 * other.m7 + m16 * other.m8,
 
                 // Third column
-                m3 * other.m1 + m7 * other.m2 + m11 * other.m3 + m15 * other.m4,
-                m3 * other.m5 + m7 * other.m6 + m11 * other.m7 + m15 * other.m8,
+                m1 * other.m9 + m5 * other.m10 + m9 * other.m11 + m13 * other.m12,
+                m2 * other.m9 + m6 * other.m10 + m10 * other.m11 + m14 * other.m12,
                 m3 * other.m9 + m7 * other.m10 + m11 * other.m11 + m15 * other.m12,
-                m3 * other.m13 + m7 * other.m14 + m11 * other.m15 + m15 * other.m16,
+                m4 * other.m9 + m8 * other.m10 + m12 * other.m11 + m16 * other.m12,
 
                 // Fourth column
-                m4 * other.m1 + m8 * other.m2 + m12 * other.m3 + m16 * other.m4,
-                m4 * other.m5 + m8 * other.m6 + m12 * other.m7 + m16 * other.m8,
-                m4 * other.m9 + m8 * other.m10 + m12 * other.m11 + m16 * other.m12,
+                m1 * other.m13 + m5 * other.m14 + m9 * other.m15 + m13 * other.m16,
+                m2 * other.m13 + m6 * other.m14 + m10 * other.m15 + m14 * other.m16,
+                m3 * other.m13 + m7 * other.m14 + m11 * other.m15 + m15 * other.m16,
                 m4 * other.m13 + m8 * other.m14 + m12 * other.m15 + m16 * other.m16
             );
         }
@@ -95,6 +96,16 @@ namespace MathClasses {
                 0.0f, 1.0f, 0.0f, 0.0f,
                 0.0f, 0.0f, 1.0f, 0.0f,
                 tx, ty, tz, 1.0f
+            );
+        }
+
+        // MakeTranslation method from Vector3
+        static Matrix4 MakeTranslation(const Vector3& v) {
+            return Matrix4(
+                1, 0, 0, 0,
+                0, 1, 0, 0,
+                0, 0, 1, 0,
+                v.x, v.y, v.z, 1
             );
         }
 
@@ -138,6 +149,26 @@ namespace MathClasses {
             );
         }
 
+        // MakeScale method
+        static Matrix4 MakeScale(float scaleX, float scaleY, float scaleZ) {
+            return Matrix4(
+                scaleX, 0, 0, 0,
+                0, scaleY, 0, 0,
+                0, 0, scaleZ, 0,
+                0, 0, 0, 1
+            );
+        }
+
+        // MakeScale method from Vector3
+        static Matrix4 MakeScale(const Vector3& v) {
+            return Matrix4(
+                v.x, 0, 0, 0,
+                0, v.y, 0, 0,
+                0, 0, v.z, 0,
+                0, 0, 0, 1
+            );
+        }
+
         // Euler rotations
         static Matrix4 MakeEuler(float pitch, float yaw, float roll) {
             Matrix4 x = MakeRotateX(pitch);
@@ -146,16 +177,34 @@ namespace MathClasses {
             return z * y * x;
         }
 
+        static Matrix4 MakeEuler(const Vector3& v) {
+            return MakeEuler(v.x, v.y, v.z);
+        }
+
+
         static Matrix4 MakeEuler(const Vector4& v) {
             return MakeEuler(v.x, v.y, v.z);
         }
 
         // Equality operator
         bool operator==(const Matrix4& other) const {
-            return m1 == other.m1 && m2 == other.m2 && m3 == other.m3 && m4 == other.m4 &&
-                m5 == other.m5 && m6 == other.m6 && m7 == other.m7 && m8 == other.m8 &&
-                m9 == other.m9 && m10 == other.m10 && m11 == other.m11 && m12 == other.m12 &&
-                m13 == other.m13 && m14 == other.m14 && m15 == other.m15 && m16 == other.m16;
+            const float EPSILON = 0.0001f;
+            return (std::fabs(m1 - other.m1) < EPSILON) &&
+                (std::fabs(m2 - other.m2) < EPSILON) &&
+                (std::fabs(m3 - other.m3) < EPSILON) &&
+                (std::fabs(m4 - other.m4) < EPSILON) &&
+                (std::fabs(m5 - other.m5) < EPSILON) &&
+                (std::fabs(m6 - other.m6) < EPSILON) &&
+                (std::fabs(m7 - other.m7) < EPSILON) &&
+                (std::fabs(m8 - other.m8) < EPSILON) &&
+                (std::fabs(m9 - other.m9) < EPSILON) &&
+                (std::fabs(m10 - other.m10) < EPSILON) &&
+                (std::fabs(m11 - other.m11) < EPSILON) &&
+                (std::fabs(m12 - other.m12) < EPSILON) &&
+                (std::fabs(m13 - other.m13) < EPSILON) &&
+                (std::fabs(m14 - other.m14) < EPSILON) &&
+                (std::fabs(m15 - other.m15) < EPSILON) &&
+                (std::fabs(m16 - other.m16) < EPSILON);
         }
 
         // Inequality operator

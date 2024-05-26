@@ -2,14 +2,13 @@
 #include <string>
 #include <cmath>
 
-namespace MathClasses
-{
+namespace MathClasses {
     struct Vector4
     {
         float x, y, z, w;
 
         // Default constructor
-        Vector4() : x(0), y(0), z(0), w(1) {}
+        Vector4() : x(0), y(0), z(0), w(0) {}
 
         // Constructor with components
         Vector4(float x, float y, float z, float w) : x(x), y(y), z(z), w(w) {}
@@ -77,9 +76,12 @@ namespace MathClasses
             return copy;
         }
 
-        // Equality operator
         bool operator==(const Vector4& other) const {
-            return x == other.x && y == other.y && z == other.z && w == other.w;
+            const float EPSILON = 0.0001f;
+            return (std::fabs(x - other.x) < EPSILON) &&
+                (std::fabs(y - other.y) < EPSILON) &&
+                (std::fabs(z - other.z) < EPSILON) &&
+                (std::fabs(w - other.w) < EPSILON);
         }
 
         // Inequality operator
@@ -92,5 +94,5 @@ namespace MathClasses
             return std::to_string(x) + ", " + std::to_string(y) + ", " + std::to_string(z) + ", " + std::to_string(w);
         }
 
-	};
+    };
 }

@@ -1,7 +1,44 @@
 ﻿  ColourTests.cpp
   Matrix3Tests.cpp
   Matrix3TransformTests.cpp
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix3TransformTests.cpp(86,28): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix3TransformTests.cpp(86,17): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix3TransformTests.cpp(86,7): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix3TransformTests.cpp(85,29): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix3TransformTests.cpp(85,18): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix3TransformTests.cpp(85,7): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix3TransformTests.cpp(84,27): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix3TransformTests.cpp(84,16): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix3TransformTests.cpp(84,6): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix3TransformTests.cpp(98,28): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix3TransformTests.cpp(98,17): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix3TransformTests.cpp(98,7): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix3TransformTests.cpp(97,29): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix3TransformTests.cpp(97,18): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix3TransformTests.cpp(97,7): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix3TransformTests.cpp(96,27): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix3TransformTests.cpp(96,16): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix3TransformTests.cpp(96,6): warning C4305: 'argument': truncation from 'double' to 'float'
   Matrix4Tests.cpp
+  Matrix4TransformTests.cpp
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix4TransformTests.cpp(81,28): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix4TransformTests.cpp(81,17): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix4TransformTests.cpp(81,7): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix4TransformTests.cpp(80,29): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix4TransformTests.cpp(80,18): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix4TransformTests.cpp(80,7): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix4TransformTests.cpp(79,35): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix4TransformTests.cpp(79,24): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix4TransformTests.cpp(79,13): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix4TransformTests.cpp(93,28): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix4TransformTests.cpp(93,17): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix4TransformTests.cpp(93,7): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix4TransformTests.cpp(92,29): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix4TransformTests.cpp(92,18): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix4TransformTests.cpp(92,7): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix4TransformTests.cpp(91,35): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix4TransformTests.cpp(91,24): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\User\Documents\AIE_Year_1\Maths_For_Games_Assignments\Maths_For_Games_Assignments\Custom Data Types\Custom_Data_Types\Matrix4TransformTests.cpp(91,13): warning C4305: 'argument': truncation from 'double' to 'float'
   Vector3Tests.cpp
   Vector4Tests.cpp
   Generating Code...

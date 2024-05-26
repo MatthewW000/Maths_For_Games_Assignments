@@ -115,13 +115,17 @@ namespace MathLibraryTests
 		// Tranposed
 		TEST_METHOD(Transposed)
 		{
-			Matrix3 m3a(1, 2, 3,
+			Matrix3 m3a(
+				1, 2, 3,
 				4, 5, 6,
 				7, 8, 9);
 
 			m3a = m3a.Transposed();
 
-			Assert::AreEqual(Matrix3(1, 4, 7, 2, 5, 8, 3, 6, 9), m3a);
+			Assert::AreEqual(Matrix3(
+				1, 4, 7, 
+				2, 5, 8, 
+				3, 6, 9), m3a);
 		}
 	};
 }

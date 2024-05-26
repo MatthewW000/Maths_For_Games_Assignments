@@ -17,7 +17,7 @@ namespace MathClasses
         }
 
         // Multiplication of a float and a Vector
-        friend Vector3 operator*(float scalar, const Vector3& vec)  {
+        friend Vector3 operator*(float scalar, const Vector3& vec) {
             return Vector3(scalar * vec.x, scalar * vec.y, scalar * vec.z);
         }
 
@@ -69,9 +69,11 @@ namespace MathClasses
             return copy;
         }
 
-        // Equality operator
         bool operator==(const Vector3& other) const {
-            return x == other.x && y == other.y && z == other.z;
+            const float EPSILON = 0.0001f;
+            return (std::fabs(x - other.x) < EPSILON) &&
+                (std::fabs(y - other.y) < EPSILON) &&
+                (std::fabs(z - other.z) < EPSILON);
         }
 
         // Inequality operator
@@ -84,5 +86,5 @@ namespace MathClasses
             return std::to_string(x) + ", " + std::to_string(y) + ", " + std::to_string(z);
         }
 
-	};
+    };
 }

@@ -32,7 +32,8 @@ namespace MathLibraryTests
 			Matrix3 actual = Matrix3::MakeTranslation(Vector3(1.2f, 3.4f, 1.0f));
 
 			Assert::AreEqual(
-				Matrix3(1.0f, 0.0f, 0.0f,
+				Matrix3(
+					1.0f, 0.0f, 0.0f,
 					0.0f, 1.0f, 0.0f,
 					1.2f, 3.4f, 1.0f),
 				actual);
@@ -56,9 +57,9 @@ namespace MathLibraryTests
 
 			Assert::AreEqual(
 				Matrix3(
-					-0.188077f, 0, 0.982154f,
+					-0.188077f, 0, -0.982154f,
 					0, 1, 0,
-					-0.982154f, 0, -0.188077f),
+					0.982154f, 0, -0.188077f),
 				actual);
 		}
 		// make rotZ from float
@@ -68,8 +69,8 @@ namespace MathLibraryTests
 
 			Assert::AreEqual(
 				Matrix3(
-					-0.981005f, -0.193984f, 0,
-					0.193984f, -0.981005f, 0,
+					-0.981005f, 0.193984f, 0,
+					-0.193984f, -0.981005f, 0,
 					0, 0, 1),
 				actual);
 		}
@@ -80,9 +81,9 @@ namespace MathLibraryTests
 
 			Assert::AreEqual(
 				Matrix3(
-					0.411982f, -0.058727f, 0.909297f,
-					-0.833738f, -0.426918f, 0.350175f,
-					0.367630f, -0.902382f, -0.224845f),
+					0.411982, 0.058727, -0.909297,
+					-0.681243, -0.642873, -0.350175,
+					-0.605127, 0.763718, -0.224845),
 				actual);
 		}
 		// make rot from euler (vector)
@@ -92,11 +93,10 @@ namespace MathLibraryTests
 
 			Assert::AreEqual(
 				Matrix3(
-					0.411982f, -0.058727f, 0.909297f,
-					-0.833738f, -0.426918f, 0.350175f,
-					0.367630f, -0.902382f, -0.224845f),
+					0.411982, 0.058727, -0.909297,
+					-0.681243, -0.642873, -0.350175,
+					-0.605127, 0.763718, -0.224845),
 				actual);
-
 		}
 		// make scale from floats
 		TEST_METHOD(MakeScaleFloat2D)

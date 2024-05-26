@@ -1,8 +1,6 @@
 #pragma once
 using Byte = unsigned char;
-
-namespace MathClasses
-{
+namespace MathClasses {
     struct Colour
     {
     public:
@@ -11,7 +9,7 @@ namespace MathClasses
     public:
         Colour() : colour(0x000000FF) {}
 
-        Colour(Byte red, Byte green, Byte blue, Byte alpha) 
+        Colour(Byte red, Byte green, Byte blue, Byte alpha)
         {
             SetRed(red);
             SetGreen(green);
