@@ -9,27 +9,26 @@ namespace MathClasses {
 		float m2, m5, m8; // Second column
 		float m3, m6, m9; // Third column
 
-		// Default constructor
-		Matrix3() :
-			m1(0), m4(0), m7(0),
-			m2(0), m5(0), m8(0),
-			m3(0), m6(0), m9(0)
+		Matrix3() : 
+			m1(0), m2(0), m3(0), 
+			m4(0), m5(0), m6(0), 
+			m7(0), m8(0), m9(0) 
 		{}
 
-		// Destructor
-		~Matrix3() {}
+		Matrix3(float m1, float m2, float m3, 
+			float m4, float m5, float m6, 
+			float m7, float m8, float m9)
+			: 
+			m1(m1), m2(m2), m3(m3), 
+			m4(m4), m5(m5), m6(m6), 
+			m7(m7), m8(m8), m9(m9) 
+		{}
 
-		// Parameterized constructor for individual floats
-		Matrix3(float a1, float a2, float a3,
-			float b1, float b2, float b3,
-			float c1, float c2, float c3)
-			: m1(a1), m4(b1), m7(c1),   // First column
-			m2(a2), m5(b2), m8(c2),   // Second column
-			m3(a3), m6(b3), m9(c3) {} // Third column
 
 		// Constructor from array
 		explicit Matrix3(const float arr[])
-			: m1(arr[0]), m4(arr[3]), m7(arr[6]),
+			: 
+			m1(arr[0]), m4(arr[3]), m7(arr[6]),
 			m2(arr[1]), m5(arr[4]), m8(arr[7]),
 			m3(arr[2]), m6(arr[5]), m9(arr[8]) {}
 
@@ -118,7 +117,8 @@ namespace MathClasses {
 		}
 
 		static Matrix3 MakeScale(float xScale, float yScale) {
-			return Matrix3(xScale, 0.0f, 0.0f,
+			return Matrix3(
+				xScale, 0.0f, 0.0f,
 				0.0f, yScale, 0.0f,
 				0.0f, 0.0f, 1.0f);
 		}
@@ -127,14 +127,32 @@ namespace MathClasses {
 			return MakeScale(v.x, v.y, v.z);
 		}
 
-		// Translation matrix from floats
-		static Matrix3 MakeTranslation(float tx, float ty) {
-			return Matrix3(
-				1.0f, 0.0f, 0.0f,
-				0.0f, 1.0f, 0.0f,
-				tx, ty, 1.0f
-			);
+
+		static Matrix3 MakeRotation(float radians) {
+			float c = cos(radians);
+			float s = sin(radians);
+			return Matrix3(c, s, 0, -s, c, 0, 0, 0, 1);
 		}
+
+		void Set(float m1, float m2, float m3, float m4, float m5, float m6, float m7, float m8, float m9) {
+			this->m1 = m1; this->m2 = m2; this->m3 = m3;
+			this->m4 = m4; this->m5 = m5; this->m6 = m6;
+			this->m7 = m7; this->m8 = m8; this->m9 = m9;
+		}
+
+		void Set(const Matrix3& m) {
+			this->m1 = m.m1; this->m2 = m.m2; this->m3 = m.m3;
+			this->m4 = m.m4; this->m5 = m.m5; this->m6 = m.m6;
+			this->m7 = m.m7; this->m8 = m.m8; this->m9 = m.m9;
+		}
+
+		static Matrix3 MakeTranslation(float x, float y) {
+			return Matrix3(
+				1, 0, 0, 
+				0, 1, 0, 
+				x, y, 1);
+		}
+
 
 		// Translation matrix from floats with z component
 		static Matrix3 MakeTranslation(float tx, float ty, float tz) {
@@ -154,6 +172,21 @@ namespace MathClasses {
 			);
 		}
 
+		// Get translation vector
+		Vector3 GetTranslation() const {
+			return Vector3(m7, m8, 0.0f);
+		}
+
+		void SetTranslation(float x, float y) {
+			m7 = x;
+			m8 = y;
+		}
+
+		void Translate(float x, float y) {
+			m7 += x;
+			m8 += y;
+		}
+
 		bool operator==(const Matrix3& other) const {
 			const float EPSILON = 0.0001f;
 			return (std::fabs(m1 - other.m1) < EPSILON) &&
@@ -165,6 +198,14 @@ namespace MathClasses {
 				(std::fabs(m7 - other.m7) < EPSILON) &&
 				(std::fabs(m8 - other.m8) < EPSILON) &&
 				(std::fabs(m9 - other.m9) < EPSILON);
+		}
+
+		void RotateZ(float radians) {
+			*this = *this * MakeRotation(radians);
+		}
+
+		void Scale(float x, float y) {
+			*this = *this * MakeScale(x, y);
 		}
 
 		// Inequality operator
